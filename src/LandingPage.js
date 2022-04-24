@@ -105,7 +105,7 @@ export default function LandingPage() {
     <div  ref={howDoesItWorkref} style={{marginTop: "10vw", textAlign: "center"}}>
       <div style={{color: "#FFFFFF", textAlign: "center"}}>
         <div className="sliderUp" style={{fontSize:"0.8vw", letterSpacing: "0.2vw"}}>
-          LET'T LINK!
+          LET'S LINK!
         </div>
         <div className="sliderUp" style={{fontSize:"2.8vw", fontWeight: "600"}}>
           how does it work?
@@ -182,7 +182,7 @@ export default function LandingPage() {
     <div style={{marginTop: "15vw", textAlign: "center"}}>
       <div style={{color: "#FFFFFF", textAlign: "center"}}>
         <div className="" style={{fontSize:"0.8vw", letterSpacing: "0.2vw"}}>
-          LET'T LINK!
+          LET'S LINK!
         </div>
         <div className="" style={{fontSize:"2.8vw", fontWeight: "600"}}>
           what are you up for?
