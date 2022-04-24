@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Link-Website/static/css/main.4bc2b779.css",
-    "main.js": "/Link-Website/static/js/main.af9b040d.js",
+    "main.js": "/Link-Website/static/js/main.95dfe767.js",
     "static/js/787.40b89deb.chunk.js": "/Link-Website/static/js/787.40b89deb.chunk.js",
     "static/media/iphoneGroup.svg": "/Link-Website/static/media/iphoneGroup.e4875448483894f7c82306f2978d1f80.svg",
     "static/media/iphoneHomePage.svg": "/Link-Website/static/media/iphoneHomePage.1f198879d2f40d51455e7d75fd9aa7a0.svg",
@@ -21,11 +21,11 @@
     "static/media/vectorRight.svg": "/Link-Website/static/media/vectorRight.9e9dc1e28e18c70f01df0773744de576.svg",
     "static/media/vectorLeft.svg": "/Link-Website/static/media/vectorLeft.166651db5bb3c97204f8357d485c11fd.svg",
     "main.4bc2b779.css.map": "/Link-Website/static/css/main.4bc2b779.css.map",
-    "main.af9b040d.js.map": "/Link-Website/static/js/main.af9b040d.js.map",
+    "main.95dfe767.js.map": "/Link-Website/static/js/main.95dfe767.js.map",
     "787.40b89deb.chunk.js.map": "/Link-Website/static/js/787.40b89deb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4bc2b779.css",
-    "static/js/main.af9b040d.js"
+    "static/js/main.95dfe767.js"
   ]
 }
