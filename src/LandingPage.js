@@ -206,7 +206,7 @@ export default function LandingPage() {
             <Image src={require("./images/collageImage3.svg").default} style={{width: "22vw"}}/>
           </div>
           <div style={{position: "relative", zIndex: "-10", left: "18vw"}}>
-            <Image src={require("./images/collageImage2.svg").default} style={{width: "22vw"}}/>
+            <Image src={require("./images/collageImage7.svg").default} style={{width: "22vw"}}/>
           </div>
           <div className='collageImage4' style={{position: "relative", zIndex: "-10", left: "22vw"}}>
             <Image src={require("./images/collageImage4.svg").default} style={{width: "22vw"}}/>
@@ -215,7 +215,7 @@ export default function LandingPage() {
 
         <div style={{position: "relative", bottom: "6.5vw", display: "flex", flexDirection: "row"}}>
           <div className='collageImage7' style={{position: "relative", zIndex: "-5", left: "24.5vw"}}>
-            <Image src={require("./images/collageImage7.svg").default} style={{width: "22vw"}}/>
+            <Image src={require("./images/collageImage2.svg").default} style={{width: "22vw"}}/>
           </div>
           <div className='collageImage6' style={{position: "relative", zIndex: "-5", left: "31vw"}}>
             <Image src={require("./images/collageImage6.svg").default} style={{width: "22vw"}}/>
