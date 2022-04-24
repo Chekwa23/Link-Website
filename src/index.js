@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import {BrowserRouter, HashRouter, Route, Routes} from "react-router-dom";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 import './index.css';
 import LandingPage from './LandingPage';
 import reportWebVitals from './reportWebVitals';
@@ -11,14 +11,14 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    <HashRouter>
+    <BrowserRouter>
       <Routes>
         <Route exact path ='/' element={<LandingPage/>} />
         {/* <Route exact path ='/AboutUs' component={aboutTeamPage} />
         <Route exact path ='/signInPage' component={signInPage} />
         <Route exact path ='/signUpPage' component={signUpPage} /> */}
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

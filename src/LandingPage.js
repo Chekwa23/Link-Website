@@ -1,5 +1,5 @@
 import React, {useRef} from 'react'
-import {Button, Image, Row, Col, Form, Container} from 'react-bootstrap'
+import {Button, Image, Row, Col, Form, Container, Alert} from 'react-bootstrap'
 import {Link} from "react-router-dom";
 
 import emailjs from '@emailjs/browser';
@@ -16,8 +16,11 @@ export default function LandingPage() {
 
     emailjs.sendForm('service_r5ynn97', 'join_wait_list', formRef.current, 'hybkXDPp2uJG4OTum')
       .then((result) => {
-          console.error(result.text);
+          if(result.status === 200){
+            alert("You are officially on the Link wait list... We LINK soon!")
+          }
       }, (error) => {
+          alert("Error occured try again later")
           console.error(error.text);
       });
   };
