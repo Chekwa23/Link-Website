@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/Link-Website/static/css/main.4bc2b779.css",
+    "main.js": "/Link-Website/static/js/main.af9b040d.js",
+    "static/js/787.40b89deb.chunk.js": "/Link-Website/static/js/787.40b89deb.chunk.js",
+    "static/media/iphoneGroup.svg": "/Link-Website/static/media/iphoneGroup.e4875448483894f7c82306f2978d1f80.svg",
+    "static/media/iphoneHomePage.svg": "/Link-Website/static/media/iphoneHomePage.1f198879d2f40d51455e7d75fd9aa7a0.svg",
+    "static/media/burnFire.svg": "/Link-Website/static/media/burnFire.dd59179810b40ee2f69222825417d14a.svg",
+    "static/media/collageImage2.svg": "/Link-Website/static/media/collageImage2.c05ff7ec4dfc5c82ecc93ae97dbb60bf.svg",
+    "static/media/collageImage5.svg": "/Link-Website/static/media/collageImage5.06ef4480208097a7a3144de930e252bf.svg",
+    "static/media/collageImage4.svg": "/Link-Website/static/media/collageImage4.9404a7510dba2274bfde4bc22bb83b6c.svg",
+    "static/media/outdoorParty.svg": "/Link-Website/static/media/outdoorParty.1fac54a2448afeacbc05ef0711eee10a.svg",
+    "static/media/collageImage3.svg": "/Link-Website/static/media/collageImage3.08e9106dbc38e3dfd82d68e5e21fb7f1.svg",
+    "static/media/collageImage1.svg": "/Link-Website/static/media/collageImage1.ae80a4100ec9f2b6f079ad7fe1bb592f.svg",
+    "static/media/collageImage6.svg": "/Link-Website/static/media/collageImage6.7238f30f104cf071b1aaa9cbb2b2b24c.svg",
+    "static/media/basketBallImage.png": "/Link-Website/static/media/basketBallImage.94c892f27fac017fc6e0.png",
+    "static/media/collageImage7.svg": "/Link-Website/static/media/collageImage7.8bfa18e963549e898989d6901d4f37c4.svg",
+    "static/media/arrows.svg": "/Link-Website/static/media/arrows.fb1c7058c7b473f856552e0d028b976f.svg",
+    "static/media/linkLogoWhite.svg": "/Link-Website/static/media/linkLogoWhite.91278ffa1180505f3185dcd316cc42d9.svg",
+    "index.html": "/Link-Website/index.html",
+    "static/media/vectorRight.svg": "/Link-Website/static/media/vectorRight.9e9dc1e28e18c70f01df0773744de576.svg",
+    "static/media/vectorLeft.svg": "/Link-Website/static/media/vectorLeft.166651db5bb3c97204f8357d485c11fd.svg",
+    "main.4bc2b779.css.map": "/Link-Website/static/css/main.4bc2b779.css.map",
+    "main.af9b040d.js.map": "/Link-Website/static/js/main.af9b040d.js.map",
+    "787.40b89deb.chunk.js.map": "/Link-Website/static/js/787.40b89deb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4bc2b779.css",
+    "static/js/main.af9b040d.js"
+  ]
+}
