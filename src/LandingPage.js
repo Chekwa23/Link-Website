@@ -62,10 +62,10 @@ export default function LandingPage() {
           <Image src={require("./images/star.png")} style={{position: "absolute", width:"9vw", right: "38.5vw", top: "4.5vw" }}/>
           <Image src={require("./images/basketBallImage.png")} style={{width:"18vw", marginTop: "1vw"}}/>
         </div>
-        <div className="sliderUp" style={{fontSize:"4.4vw", fontWeight: "600", lineHeight:"100%"}} >
+        <div className="" style={{fontSize:"4.4vw", fontWeight: "600", lineHeight:"100%"}} >
           NOTHING IS EVER FUN ALONE...
         </div>
-        <div className="sliderUp" style={{fontSize:"1.8vw", color: "#E69D37", marginLeft: "45vw"}}>
+        <div className="" style={{fontSize:"1.8vw", color: "#E69D37", marginLeft: "45vw"}}>
           - yes, even that
         </div>
         <Container fluid>
@@ -74,11 +74,11 @@ export default function LandingPage() {
             <Image className='zoomOut' src={require("./images/outdoorParty.svg").default} style={{width:"22vw", marginTop: "0.5vw"}}/>
           </Col>
           <Col>
-            <div className="sliderUp" style={{fontSize:"1.4vw"}}>
-              <span style={{textDecoration: "line-through"}}>LESS CHAT, MORE ACTION</span>
-              <span style={{position: "absolute", left: "8vw", top: "0.8vw", color: "#E69D37", fontWeight: "700"}}> NO CHAT, JUST ACTION </span>
+            <div className="" style={{fontSize:"1.4vw"}}>
+              <div style={{textDecoration: "line-through"}}>LESS CHAT, MORE ACTION</div>
+              <div style={{position: "relative", left: "1vw", bottom: "1.3vw", color: "#E69D37", fontWeight: "700"}}> NO CHAT, JUST ACTION </div>
             </div>
-            <div className="sliderUp" style={{marginTop: "2.5vw"}}>
+            <div className="" style={{marginTop: "2.5vw"}}>
               <Button 
                 className="buttonStyle" 
                 variant="light" 
@@ -104,13 +104,13 @@ export default function LandingPage() {
     {/* iphone */}
     <div  ref={howDoesItWorkref} style={{marginTop: "10vw", textAlign: "center"}}>
       <div style={{color: "#FFFFFF", textAlign: "center"}}>
-        <div className="sliderUp" style={{fontSize:"0.8vw", letterSpacing: "0.2vw"}}>
+        <div className="" style={{fontSize:"0.8vw", letterSpacing: "0.2vw"}}>
           LET'S LINK!
         </div>
-        <div className="sliderUp" style={{fontSize:"2.8vw", fontWeight: "600"}}>
+        <div className="" style={{fontSize:"2.8vw", fontWeight: "600"}}>
           how does it work?
         </div>
-        <div className="sliderUp" style={{fontSize:"0.8vw"}}>
+        <div className="" style={{fontSize:"0.8vw"}}>
           All you need to do is join or create a group and that's all the magic to it
         </div>
       </div>
@@ -155,7 +155,7 @@ export default function LandingPage() {
             <Image src={require("./images/vectorRight.svg").default} style={{width:"5vw"}}/>
           </div>
         </div>
-        <div className="sliderUp">
+        <div className="">
           <div style={{position: "absolute", right: "27vw", marginTop: "33vw"}}>
             <div style={{width: "22vw", fontSize: "1vw", textAlign: "left", display: "flex", flexDirection: "row", backgroundColor: "#FFFFFF"}}>
               <div style={{display: "flex", flexDirection: "col", justifyContent:"center", alignItems:"center", backgroundColor: "#E69D37", width: "18%"}}>
