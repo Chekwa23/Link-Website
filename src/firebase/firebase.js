@@ -1,6 +1,6 @@
 import firebase from 'firebase/app';
 import 'firebase/firestore'
-import ApiKeys from '../constants/ApiKeys';
+import {ApiKeys} from '../constants/ApiKeys';
 
 if(!firebase.apps.length){
     firebase.initializeApp(ApiKeys.FirebaseConfig);

@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react'
+import React, {useRef} from 'react'
 import {Button, Image, Row, Col, Form, Container} from 'react-bootstrap'
 import {Link} from "react-router-dom";
 
@@ -118,7 +118,9 @@ export default function LandingPage() {
       </div>
     </div>
     {/* iphone */}
-    <IphoneInstructionsViewPortBlock ref={howDoesItWorkref}/>
+    <div ref={howDoesItWorkref}>
+      <IphoneInstructionsViewPortBlock />
+    </div>
     {/* Collage */}
     <div style={{marginTop: "15vw", textAlign: "center"}}>
       <div style={{color: "#FFFFFF", textAlign: "center"}}>
