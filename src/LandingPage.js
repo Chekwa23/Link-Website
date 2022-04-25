@@ -1,8 +1,10 @@
-import React, {useRef} from 'react'
-import {Button, Image, Row, Col, Form, Container, Alert} from 'react-bootstrap'
+import React, {useRef, useState} from 'react'
+import {Button, Image, Row, Col, Form, Container} from 'react-bootstrap'
 import {Link} from "react-router-dom";
 
 import emailjs from '@emailjs/browser';
+
+import {updateEmailList} from './firebase/AuthContext.js';
 
 import "./style.css"
 
@@ -10,13 +12,19 @@ export default function LandingPage() {
   const waitlistRef = useRef(null)
   const howDoesItWorkref = useRef(null)
   const formRef = useRef(null) 
+  const emailRef = useRef(null)
 
   const sendWaitListEmail = (e) => {
     e.preventDefault();
 
+    if(emailRef.current.value.length === 0){
+      alert("Invalid email")
+      return
+    }
     emailjs.sendForm('service_r5ynn97', 'join_wait_list', formRef.current, 'hybkXDPp2uJG4OTum')
       .then((result) => {
           if(result.status === 200){
+            updateEmailList(emailRef.current.value)
             alert("You are officially on the Link wait list... We LINK soon!")
           }
       }, (error) => {
@@ -62,56 +70,68 @@ export default function LandingPage() {
           <Image src={require("./images/star.png")} style={{position: "absolute", width:"9vw", right: "38.5vw", top: "4.5vw" }}/>
           <Image src={require("./images/basketBallImage.png")} style={{width:"18vw", marginTop: "1vw"}}/>
         </div>
-        <div className="" style={{fontSize:"4.4vw", fontWeight: "600", lineHeight:"100%"}} >
-          NOTHING IS EVER FUN ALONE...
+        <div className="slider">
+          <div className="sliderUp" style={{fontSize:"4.4vw", fontWeight: "600", lineHeight:"100%"}} >
+            NOTHING IS EVER FUN ALONE...
+          </div>
         </div>
-        <div className="" style={{fontSize:"1.8vw", color: "#E69D37", marginLeft: "45vw"}}>
-          - yes, even that
+        <div className="slider">
+          <div className="sliderUp" style={{fontSize:"1.8vw", color: "#E69D37", marginLeft: "45vw"}}>
+            - yes, even that
+          </div>
         </div>
         <Container fluid>
-        <Row>
-          <Col>
-            <Image className='zoomOut' src={require("./images/outdoorParty.svg").default} style={{width:"22vw", marginTop: "0.5vw"}}/>
-          </Col>
-          <Col>
-            <div className="" style={{fontSize:"1.4vw"}}>
-              <div style={{textDecoration: "line-through"}}>LESS CHAT, MORE ACTION</div>
-              <div style={{position: "relative", left: "1vw", bottom: "1.3vw", color: "#E69D37", fontWeight: "700"}}> NO CHAT, JUST ACTION </div>
-            </div>
-            <div className="" style={{marginTop: "2.5vw"}}>
-              <Button 
-                className="buttonStyle" 
-                variant="light" 
-                style={{borderRadius: 0, fontSize: "0.8vw",fontWeight: "bold", padding: "0.7vw 1.8vw"}}
-                onClick={() => waitlistRef.current.scrollIntoView()}
-              >
-                JOIN THE WAITLIST
-              </Button>
-            </div>
-            <Image 
-              src={require("./images/arrows.svg").default}  
-              style={{width:"2vw", marginTop: "6vw", cursor: "pointer"}}
-              onClick={() => howDoesItWorkref.current.scrollIntoView()}
-            />
-          </Col>
-          <Col>
-            <Image className='zoomOut' src={require("./images/burnFire.svg").default} style={{width:"22vw", marginTop: "3vw"}}/>
-          </Col>
-        </Row>
+          <Row>
+            <Col>
+              <Image className='zoomOut' src={require("./images/outdoorParty.svg").default} style={{width:"22vw", marginTop: "0.5vw"}}/>
+            </Col>
+            <Col>
+              <div className="slider">
+                <div className="sliderUp" style={{fontSize:"1.4vw"}}>
+                  <div style={{textDecoration: "line-through"}}>LESS CHAT, MORE ACTION</div>
+                  <div style={{position: "relative", left: "1vw", bottom: "1.3vw", color: "#E69D37", fontWeight: "700"}}> NO CHAT, JUST ACTION </div>
+                </div>
+              </div>
+              <div className="slider" style={{marginTop: "2.5vw"}}>
+                <Button 
+                  className="buttonStyle sliderUp" 
+                  variant="light" 
+                  style={{borderRadius: 0, fontSize: "0.8vw",fontWeight: "bold", padding: "0.7vw 1.8vw"}}
+                  onClick={() => waitlistRef.current.scrollIntoView()}
+                >
+                  JOIN THE WAITLIST
+                </Button>
+              </div>
+              <Image 
+                src={require("./images/arrows.svg").default}  
+                style={{width:"2vw", marginTop: "6vw", cursor: "pointer"}}
+                onClick={() => howDoesItWorkref.current.scrollIntoView()}
+              />
+            </Col>
+            <Col>
+              <Image className='zoomOut' src={require("./images/burnFire.svg").default} style={{width:"22vw", marginTop: "3vw"}}/>
+            </Col>
+          </Row>
         </Container>
       </div>
     </div>
     {/* iphone */}
     <div  ref={howDoesItWorkref} style={{marginTop: "10vw", textAlign: "center"}}>
       <div style={{color: "#FFFFFF", textAlign: "center"}}>
-        <div className="" style={{fontSize:"0.8vw", letterSpacing: "0.2vw"}}>
-          LET'S LINK!
+        <div className="slider">
+          <div className="sliderUp" style={{fontSize:"0.8vw", letterSpacing: "0.2vw"}}>
+            LET'S LINK!
+          </div>
         </div>
-        <div className="" style={{fontSize:"2.8vw", fontWeight: "600"}}>
-          how does it work?
+        <div className="slider">  
+          <div className="sliderUp" style={{fontSize:"2.8vw", fontWeight: "600"}}>
+            how does it work?
+          </div>
         </div>
-        <div className="" style={{fontSize:"0.8vw"}}>
-          All you need to do is join or create a group and that's all the magic to it
+        <div className="slider">
+          <div className="sliderUp" style={{fontSize:"0.8vw"}}>
+            All you need to do is join or create a group and that's all the magic to it
+          </div>
         </div>
       </div>
       <div>
@@ -143,10 +163,10 @@ export default function LandingPage() {
               </div>
               <div style={{padding: "1vw 1vw 1vw 1vw", width: "82%"}}>
                 <div style={{color: "#2B72D6", fontWeight: "500", fontSize:"1.3vw"}}>
-                  Join a group
+                  Create a group
                 </div>
                 <div>
-                  You can choose to join existing groups and sort based on your interests be it social, sports and all sorts.
+                  You can also create your own group, listing out all the specific details for other people to join in.
                 </div>
               </div>
             </div>
@@ -163,10 +183,10 @@ export default function LandingPage() {
               </div>
               <div style={{padding: "1vw 1vw 1vw 1vw", width: "82%"}}>
                 <div style={{color: "#2B72D6", fontWeight: "500", fontSize:"1.3vw"}}>
-                  Join a group
+                  View group details
                 </div>
                 <div>
-                  You can choose to join existing groups and sort based on your interests be it social, sports and all sorts.
+                  Check out group details to know stuff like where and time to meet up.
                 </div>
               </div>
             </div>
@@ -224,7 +244,10 @@ export default function LandingPage() {
       </div>
     </div>
     {/* iphone group */}
-    <div style={{ textAlign: "center"}}>
+    <div style={{textAlign: "center"}} onClick={() => {
+      // document.getElementById("sliderIphoneGroup").classList.add("slider")
+      document.getElementById("sliderUpIphoneGroup").classList.add("sliderUp")
+    }}>
       <div style={{color: "#FFFFFF", textAlign: "center"}}>
         <div className="" style={{fontSize:"2.8vw", fontWeight: "600"}}>
           do more things you like
@@ -233,8 +256,10 @@ export default function LandingPage() {
           LINK is simple, fun, and productive. You can post and discover plan ideas, participate in groups, and plan activities together.
         </div>
       </div>
-      <div className="" style={{marginTop: "5vw"}}>
-        <Image src={require("./images/iphoneGroup.svg").default} style={{width: "70vw"}}/>
+      <div className="slider">
+        <div className="" id="sliderUpIphoneGroup" style={{marginTop: "5vw"}}>
+          <Image src={require("./images/iphoneGroup.svg").default} style={{width: "70vw"}}/>
+        </div>
       </div>
     </div>
     {/* join the wait list */}
@@ -245,7 +270,7 @@ export default function LandingPage() {
       <div>
         <Form ref={formRef} onSubmit={sendWaitListEmail} style={{display: "flex", flexDirection: "row", justifyContent: "center", marginTop:"2.5vw"}}>
           <Form.Group controlId="formBasicEmail">
-            <Form.Control type="email" name="user_email" placeholder="Enter your email address" />
+            <Form.Control ref={emailRef} type="email" name="user_email" placeholder="Enter your email address" />
           </Form.Group>
           <Button 
             className='buttonStyle2' 
@@ -267,7 +292,7 @@ export default function LandingPage() {
         2022 LINK, Inc. All right reserved.
       </div>
       <div style={{fontSize: "0.8vw" }}>
-        <span style={{marginRight: "1.5vw"}}><Link className='linkStyle' to="/PrivacyPolicy">Privacy Policy</Link></span><span><Link className='linkStyle' to="/TermsAndCondition">Terms and Conditions</Link></span>
+        <span style={{marginRight: "1.5vw"}}><Link className='linkStyle' to="/privacy-policy">Privacy Policy</Link></span><span><Link className='linkStyle' to="/terms-of-service">Terms of Service</Link></span>
       </div>
     </div>
   </div>

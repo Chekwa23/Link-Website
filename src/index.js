@@ -6,6 +6,8 @@ import LandingPage from './LandingPage';
 import reportWebVitals from './reportWebVitals';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import PrivacyPolicyPage from './PrivacyPolicyPage.js';
+import TermsOfServicePage from './TermsOfServicePage.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -14,9 +16,8 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route exact path ='/' element={<LandingPage/>} />
-        {/* <Route exact path ='/AboutUs' component={aboutTeamPage} />
-        <Route exact path ='/signInPage' component={signInPage} />
-        <Route exact path ='/signUpPage' component={signUpPage} /> */}
+        <Route path ='/privacy-policy' element={<PrivacyPolicyPage/>} />
+        <Route path ='/terms-of-service' element={<TermsOfServicePage/>} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
