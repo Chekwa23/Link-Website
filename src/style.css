@@ -1,3 +1,7 @@
+.slider {
+    overflow: hidden;
+}
+
 .sliderRight {
     /* position: absolute; */
     -webkit-animation: slideInRight 2s forwards;
@@ -30,7 +34,6 @@
 }
 
 .sliderLeft {
-    /* position: absolute; */
     -webkit-animation: slideInLeft 2s forwards;
     -moz-animation: slideInLeft 2s forwards;
     animation: slideInLeft 2s forwards;
@@ -60,9 +63,6 @@
     }
 }
 
-.slider {
-    overflow: hidden;
-}
 .sliderUp {
     -webkit-animation: slideUp 2s ease;
     -moz-animation: slideUp 2s ease;
@@ -90,36 +90,6 @@
     }
     100% {
     transform: translateY(0%);
-    }
-}
-
-.collageImage:hover {
-    -webkit-animation: collageImage1Animation 5s forwards;
-    -moz-animation: collageImage1Animation 5s forwards;
-    animation: collageImage1Animation 5s forwards;
-}
-@-webkit-keyframes collageImage1Animation {
-    0% {
-    transform: translateX(-100px);
-    }
-    100% {
-    transform: translateX(-100px);
-    }
-}
-@-moz-keyframes collageImage1Animation {
-    0% {
-    transform: translateX(-100px);
-    }
-    100% {
-    transform: translateX(-100px);
-    }
-}
-@keyframes collageImage1Animation {
-    0% {
-    transform: translateX(-100px);
-    }
-    100% {
-    transform: translateX(-100px);
     }
 }
 
@@ -188,5 +158,112 @@
 }
 
 .showDiv {
-    visibility: hidden;
+    visibility: visible;
+}
+
+/* ----------------------------------- */
+
+.collageImages:hover .collageImage1{
+    -webkit-animation: collageImage1Animation 1s forwards;
+    -moz-animation: collageImage1Animation 1s forwards;
+    animation: collageImage1Animation 1s forwards;
+}
+@-webkit-keyframes collageImage1Animation {
+    100% {
+    transform: translateX(-100px) translateY(-100px);
+    }
+}
+@-moz-keyframes collageImage1Animation {
+    100% {
+    transform: translateX(-100px) translateY(-100px);
+    }
+}
+@keyframes collageImage1Animation {
+    100% {
+    transform: translateX(-100px) translateY(-100px);
+    }
+}
+
+.collageImages:hover .collageImage5{
+    -webkit-animation: collageImage5Animation 1s forwards;
+    -moz-animation: collageImage5Animation 1s forwards;
+    animation: collageImage5Animation 1s forwards;
+}
+@-webkit-keyframes collageImage5Animation {
+    100% {
+    transform: translateX(200px) translateY(-100px);
+    }
+}
+@-moz-keyframes collageImage5Animation {
+    100% {
+    transform: translateX(200px) translateY(-100px);
+    }
+}
+@keyframes collageImage5Animation {
+    100% {
+    transform: translateX(200px) translateY(-100px);
+    }
+}
+
+.collageImages:hover .collageImage3{
+    -webkit-animation: collageImage3Animation 1s forwards;
+    -moz-animation: collageImage3Animation 1s forwards;
+    animation: collageImage3Animation 1s forwards;
+}
+@-webkit-keyframes collageImage3Animation {
+    100% {
+    transform: translateX(-100px) translateY(60px);
+    }
+}
+@-moz-keyframes collageImage3Animation {
+    100% {
+    transform: translateX(-100px) translateY(60px);
+    }
+}
+@keyframes collageImage3Animation {
+    100% {
+    transform: translateX(-100px) translateY(60px);
+    }
+}
+
+.collageImages:hover .collageImage4{
+    -webkit-animation: collageImage4Animation 1s forwards;
+    -moz-animation: collageImage4Animation 1s forwards;
+    animation: collageImage4Animation 1s forwards;
+}
+@-webkit-keyframes collageImage4Animation {
+    100% {
+    transform: translateX(100px) translateY(10px);
+    }
+}
+@-moz-keyframes collageImage4Animation {
+    100% {
+    transform: translateX(100px) translateY(10px);
+    }
+}
+@keyframes collageImage4Animation {
+    100% {
+    transform: translateX(100px) translateY(10px);
+    }
+}
+
+.collageImages:hover .collageImage2{
+    -webkit-animation: collageImage2Animation 1s forwards;
+    -moz-animation: collageImage2Animation 1s forwards;
+    animation: collageImage2Animation 1s forwards;
+}
+@-webkit-keyframes collageImage2Animation {
+    100% {
+    transform: translateX(5px) translateY(150px);
+    }
+}
+@-moz-keyframes collageImage2Animation {
+    100% {
+    transform: translateX(5px) translateY(150px);
+    }
+}
+@keyframes collageImage2Animation {
+    100% {
+    transform: translateX(5px) translateY(150px);
+    }
 }

@@ -2,9 +2,10 @@ import React, {useRef, useState} from 'react'
 import {Button, Image, Row, Col, Form, Container} from 'react-bootstrap'
 import {Link} from "react-router-dom";
 
+import handleViewport from 'react-in-viewport';
 import emailjs from '@emailjs/browser';
 
-import {updateEmailList} from './firebase/AuthContext.js';
+import {updateEmailList} from './firebase/APIs.js';
 
 import "./style.css"
 
@@ -25,10 +26,11 @@ export default function LandingPage() {
       .then((result) => {
           if(result.status === 200){
             updateEmailList(emailRef.current.value)
+            emailRef.current.value = "";
             alert("You are officially on the Link wait list... We LINK soon!")
           }
       }, (error) => {
-          alert("Error occured try again later")
+          alert("Error occured try again later or check your email address")
           console.error(error.text);
       });
   };
@@ -53,7 +55,7 @@ export default function LandingPage() {
       </Button>
     </div>
 
-    <div style={{marginTop: "3vw"}}>
+    <div className="slider" style={{marginTop: "3vw"}}>
       <div className="sliderRight" style={{left: "-11.7vw", zIndex: "-10", position: "absolute"}}>
         <div style={{fontSize:"6vw", fontWeight: "700", color: "#0E1724", lineHeight:"100%", textShadow: "-1px -1px 0 #999999, 1px -1px 0 #999999, -1px 1px 0 #999999, 1px 1px 0 #999999"}}>
           NOTHING IS EVER FUN ALONE...
@@ -116,88 +118,7 @@ export default function LandingPage() {
       </div>
     </div>
     {/* iphone */}
-    <div  ref={howDoesItWorkref} style={{marginTop: "10vw", textAlign: "center"}}>
-      <div style={{color: "#FFFFFF", textAlign: "center"}}>
-        <div className="slider">
-          <div className="sliderUp" style={{fontSize:"0.8vw", letterSpacing: "0.2vw"}}>
-            LET'S LINK!
-          </div>
-        </div>
-        <div className="slider">  
-          <div className="sliderUp" style={{fontSize:"2.8vw", fontWeight: "600"}}>
-            how does it work?
-          </div>
-        </div>
-        <div className="slider">
-          <div className="sliderUp" style={{fontSize:"0.8vw"}}>
-            All you need to do is join or create a group and that's all the magic to it
-          </div>
-        </div>
-      </div>
-      <div>
-        <div className='sliderRight'>
-          <div style={{position: "absolute", left: "24vw", marginTop: "10vw"}}>
-            <div style={{width: "22vw", fontSize: "1vw", textAlign: "right", display: "flex", flexDirection: "row", backgroundColor: "#FFFFFF"}}>
-              <div style={{padding: "1vw 1vw 1vw 1vw", width: "82%"}}>
-                <div style={{color: "#2B72D6", fontWeight: "500", fontSize:"1.3vw"}}>
-                  Join a group
-                </div>
-                <div>
-                  You can choose to join existing groups and sort based on your interests be it social, sports and all sorts.
-                </div>
-              </div>
-              <div style={{display: "flex", flexDirection: "col", justifyContent:"center", alignItems:"center", backgroundColor: "#E69D37", width: "18%"}}>
-                <Image src={require("./images/linkLogoWhite.svg").default} style={{width: "2.5vw"}}/>
-              </div>
-            </div>
-          </div>
-          <div style={{position: "absolute", left: "46vw", marginTop: "15vw"}}>
-            <Image src={require("./images/vectorLeft.svg").default} style={{width:"3vw"}}/>
-          </div>
-        </div>
-        <div className='sliderLeft'>
-          <div style={{position: "absolute", right: "12.5vw", marginTop: "13vw"}}>
-            <div style={{width: "22vw", fontSize: "1vw", textAlign: "left", display: "flex", flexDirection: "row", backgroundColor: "#FFFFFF"}}>
-              <div style={{display: "flex", flexDirection: "col", justifyContent:"center", alignItems:"center", backgroundColor: "#E69D37", width: "18%"}}>
-                <Image src={require("./images/linkLogoWhite.svg").default} style={{width: "2.5vw"}}/>
-              </div>
-              <div style={{padding: "1vw 1vw 1vw 1vw", width: "82%"}}>
-                <div style={{color: "#2B72D6", fontWeight: "500", fontSize:"1.3vw"}}>
-                  Create a group
-                </div>
-                <div>
-                  You can also create your own group, listing out all the specific details for other people to join in.
-                </div>
-              </div>
-            </div>
-          </div>
-          <div style={{position: "absolute", right: "34.2vw", marginTop: "14.5vw"}}>
-            <Image src={require("./images/vectorRight.svg").default} style={{width:"5vw"}}/>
-          </div>
-        </div>
-        <div className="">
-          <div style={{position: "absolute", right: "27vw", marginTop: "33vw"}}>
-            <div style={{width: "22vw", fontSize: "1vw", textAlign: "left", display: "flex", flexDirection: "row", backgroundColor: "#FFFFFF"}}>
-              <div style={{display: "flex", flexDirection: "col", justifyContent:"center", alignItems:"center", backgroundColor: "#E69D37", width: "18%"}}>
-                <Image src={require("./images/linkLogoWhite.svg").default} style={{width: "2.5vw"}}/>
-              </div>
-              <div style={{padding: "1vw 1vw 1vw 1vw", width: "82%"}}>
-                <div style={{color: "#2B72D6", fontWeight: "500", fontSize:"1.3vw"}}>
-                  View group details
-                </div>
-                <div>
-                  Check out group details to know stuff like where and time to meet up.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div style={{position: "relative", zIndex: "-10"}}>
-          <Image src={require("./images/iphoneHomePage.svg").default} style={{width:"40vw"}}/>
-        </div>
-
-      </div>
-    </div>
+    <IphoneInstructionsViewPortBlock ref={howDoesItWorkref}/>
     {/* Collage */}
     <div style={{marginTop: "15vw", textAlign: "center"}}>
       <div style={{color: "#FFFFFF", textAlign: "center"}}>
@@ -234,34 +155,17 @@ export default function LandingPage() {
         </div>
 
         <div style={{position: "relative", bottom: "6.5vw", display: "flex", flexDirection: "row"}}>
-          <div className='collageImage7' style={{position: "relative", zIndex: "-5", left: "24.5vw"}}>
+          <div className='collageImage2' style={{position: "relative", zIndex: "-5", left: "24.5vw"}}>
             <Image src={require("./images/collageImage2.svg").default} style={{width: "22vw"}}/>
           </div>
-          <div className='collageImage6' style={{position: "relative", zIndex: "-5", left: "31vw"}}>
+          <div className='collageImage2' style={{position: "relative", zIndex: "-5", left: "31vw"}}>
             <Image src={require("./images/collageImage6.svg").default} style={{width: "22vw"}}/>
           </div>
         </div>
       </div>
     </div>
     {/* iphone group */}
-    <div style={{textAlign: "center"}} onClick={() => {
-      // document.getElementById("sliderIphoneGroup").classList.add("slider")
-      document.getElementById("sliderUpIphoneGroup").classList.add("sliderUp")
-    }}>
-      <div style={{color: "#FFFFFF", textAlign: "center"}}>
-        <div className="" style={{fontSize:"2.8vw", fontWeight: "600"}}>
-          do more things you like
-        </div>
-        <div className="" style={{fontSize:"0.8vw", padding: "0vw 35vw"}}>
-          LINK is simple, fun, and productive. You can post and discover plan ideas, participate in groups, and plan activities together.
-        </div>
-      </div>
-      <div className="slider">
-        <div className="" id="sliderUpIphoneGroup" style={{marginTop: "5vw"}}>
-          <Image src={require("./images/iphoneGroup.svg").default} style={{width: "70vw"}}/>
-        </div>
-      </div>
-    </div>
+    <IphoneGroupViewPortBlock/>
     {/* join the wait list */}
     <div ref={waitlistRef} style={{backgroundColor: "#E69D37", textAlign: "center", padding: "5vw 28vw"}}>
       <div style={{fontSize:"2.8vw", fontWeight: "600", lineHeight: "3vw"}}>
@@ -298,3 +202,117 @@ export default function LandingPage() {
   </div>
   )
 }
+
+const IphoneInstructionsViewPortBlock = handleViewport((props) => {
+  const { inViewport, forwardedRef } = props;
+  const animationStyleSliderUp = inViewport ? 'sliderUp' : '';
+  const animationStyleSliderRight = inViewport ? 'sliderRight' : '';
+  const animationStyleSliderLeft = inViewport ? 'sliderLeft' : '';
+
+  return (
+    <div ref={forwardedRef} style={{marginTop: "10vw", textAlign: "center"}}>
+      <div style={{color: "#FFFFFF", textAlign: "center"}}>
+        <div className="slider">
+          <div className={animationStyleSliderUp} style={{fontSize:"0.8vw", letterSpacing: "0.2vw"}}>
+            LET'S LINK!
+          </div>
+        </div>
+        <div className="slider">  
+          <div className={animationStyleSliderUp} style={{fontSize:"2.8vw", fontWeight: "600"}}>
+            how does it work?
+          </div>
+        </div>
+        <div className="slider">
+          <div className={animationStyleSliderUp} style={{fontSize:"0.8vw"}}>
+            All you need to do is join or create a group and that's all the magic to it
+          </div>
+        </div>
+      </div>
+      <div className="slider">
+        <div className={animationStyleSliderRight}>
+          <div style={{position: "absolute", left: "24vw", marginTop: "10vw"}}>
+            <div style={{width: "22vw", fontSize: "1vw", textAlign: "right", display: "flex", flexDirection: "row", backgroundColor: "#FFFFFF"}}>
+              <div style={{padding: "1vw 1vw 1vw 1vw", width: "82%"}}>
+                <div style={{color: "#2B72D6", fontWeight: "500", fontSize:"1.3vw"}}>
+                  Join a group
+                </div>
+                <div>
+                  You can choose to join existing groups and sort based on your interests be it social, sports and all sorts.
+                </div>
+              </div>
+              <div style={{display: "flex", flexDirection: "col", justifyContent:"center", alignItems:"center", backgroundColor: "#E69D37", width: "18%"}}>
+                <Image src={require("./images/linkLogoWhite.svg").default} style={{width: "2.5vw"}}/>
+              </div>
+            </div>
+          </div>
+          <div style={{position: "absolute", left: "46vw", marginTop: "15vw"}}>
+            <Image src={require("./images/vectorLeft.svg").default} style={{width:"3vw"}}/>
+          </div>
+        </div>
+        <div className={animationStyleSliderLeft}>
+          <div style={{position: "absolute", right: "12.5vw", marginTop: "13vw"}}>
+            <div style={{width: "22vw", fontSize: "1vw", textAlign: "left", display: "flex", flexDirection: "row", backgroundColor: "#FFFFFF"}}>
+              <div style={{display: "flex", flexDirection: "col", justifyContent:"center", alignItems:"center", backgroundColor: "#E69D37", width: "18%"}}>
+                <Image src={require("./images/linkLogoWhite.svg").default} style={{width: "2.5vw"}}/>
+              </div>
+              <div style={{padding: "1vw 1vw 1vw 1vw", width: "82%"}}>
+                <div style={{color: "#2B72D6", fontWeight: "500", fontSize:"1.3vw"}}>
+                  Create a group
+                </div>
+                <div>
+                  You can also create your own group, listing out all the specific details for other people to join in.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style={{position: "absolute", right: "34.2vw", marginTop: "14.5vw"}}>
+            <Image src={require("./images/vectorRight.svg").default} style={{width:"5vw"}}/>
+          </div>
+        </div>
+        <div className={animationStyleSliderLeft}>
+          <div style={{position: "absolute", right: "27vw", marginTop: "33vw"}}>
+            <div style={{width: "22vw", fontSize: "1vw", textAlign: "left", display: "flex", flexDirection: "row", backgroundColor: "#FFFFFF"}}>
+              <div style={{display: "flex", flexDirection: "col", justifyContent:"center", alignItems:"center", backgroundColor: "#E69D37", width: "18%"}}>
+                <Image src={require("./images/linkLogoWhite.svg").default} style={{width: "2.5vw"}}/>
+              </div>
+              <div style={{padding: "1vw 1vw 1vw 1vw", width: "82%"}}>
+                <div style={{color: "#2B72D6", fontWeight: "500", fontSize:"1.3vw"}}>
+                  View group details
+                </div>
+                <div>
+                  Check out group details to know stuff like where and time to meet up.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{position: "relative", zIndex: "-10"}}>
+          <Image src={require("./images/iphoneHomePage.svg").default} style={{width:"40vw"}}/>
+        </div>
+      </div>
+    </div>
+  )
+});
+
+const IphoneGroupViewPortBlock = handleViewport((props) => {
+  const { inViewport, forwardedRef } = props;
+  const animationStyle = inViewport ? 'sliderUp' : '';
+  return (
+    <div style={{textAlign: "center"}} ref={forwardedRef}>
+      <div style={{color: "#FFFFFF", textAlign: "center"}}>
+        <div className="" style={{fontSize:"2.8vw", fontWeight: "600"}}>
+          do more things you like
+        </div>
+        <div className="" style={{fontSize:"0.8vw", padding: "0vw 35vw"}}>
+          LINK is simple, fun, and productive. You can post and discover plan ideas, participate in groups, and plan activities together.
+        </div>
+      </div>
+      <div className="slider">
+        <div className={animationStyle} id="sliderUpIphoneGroup" style={{marginTop: "5vw"}}>
+          <Image src={require("./images/iphoneGroup.svg").default} style={{width: "70vw"}}/>
+        </div>
+      </div>
+    </div>
+  );
+});
+
