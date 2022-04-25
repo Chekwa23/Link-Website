@@ -164,106 +164,106 @@
 /* ----------------------------------- */
 
 .collageImages:hover .collageImage1{
-    -webkit-animation: collageImage1Animation 1s forwards;
-    -moz-animation: collageImage1Animation 1s forwards;
-    animation: collageImage1Animation 1s forwards;
+    -webkit-animation: collageImage1Animation 0.7s forwards;
+    -moz-animation: collageImage1Animation 0.7s forwards;
+    animation: collageImage1Animation 0.7s forwards;
 }
 @-webkit-keyframes collageImage1Animation {
     100% {
-    transform: translateX(-100px) translateY(-100px);
+    transform: translateX(-26%) translateY(-29%);
     }
 }
 @-moz-keyframes collageImage1Animation {
     100% {
-    transform: translateX(-100px) translateY(-100px);
+    transform: translateX(-26%) translateY(-29%);
     }
 }
 @keyframes collageImage1Animation {
     100% {
-    transform: translateX(-100px) translateY(-100px);
+    transform: translateX(-26%) translateY(-29%);
     }
 }
 
 .collageImages:hover .collageImage5{
-    -webkit-animation: collageImage5Animation 1s forwards;
-    -moz-animation: collageImage5Animation 1s forwards;
-    animation: collageImage5Animation 1s forwards;
+    -webkit-animation: collageImage5Animation 0.7s forwards;
+    -moz-animation: collageImage5Animation 0.7s forwards;
+    animation: collageImage5Animation 0.7s forwards;
 }
 @-webkit-keyframes collageImage5Animation {
     100% {
-    transform: translateX(200px) translateY(-100px);
+    transform: translateX(53%) translateY(-30%);
     }
 }
 @-moz-keyframes collageImage5Animation {
     100% {
-    transform: translateX(200px) translateY(-100px);
+    transform: translateX(53%) translateY(-30%);
     }
 }
 @keyframes collageImage5Animation {
     100% {
-    transform: translateX(200px) translateY(-100px);
+    transform: translateX(53%) translateY(-30%);
     }
 }
 
 .collageImages:hover .collageImage3{
-    -webkit-animation: collageImage3Animation 1s forwards;
-    -moz-animation: collageImage3Animation 1s forwards;
-    animation: collageImage3Animation 1s forwards;
+    -webkit-animation: collageImage3Animation 0.7s forwards;
+    -moz-animation: collageImage3Animation 0.7s forwards;
+    animation: collageImage3Animation 0.7s forwards;
 }
 @-webkit-keyframes collageImage3Animation {
     100% {
-    transform: translateX(-100px) translateY(60px);
+    transform: translateX(-20%) translateY(10%);
     }
 }
 @-moz-keyframes collageImage3Animation {
     100% {
-    transform: translateX(-100px) translateY(60px);
+    transform: translateX(-20%) translateY(10%);
     }
 }
 @keyframes collageImage3Animation {
     100% {
-    transform: translateX(-100px) translateY(60px);
+    transform: translateX(-20%) translateY(10%);
     }
 }
 
 .collageImages:hover .collageImage4{
-    -webkit-animation: collageImage4Animation 1s forwards;
-    -moz-animation: collageImage4Animation 1s forwards;
-    animation: collageImage4Animation 1s forwards;
+    -webkit-animation: collageImage4Animation 0.7s forwards;
+    -moz-animation: collageImage4Animation 0.7s forwards;
+    animation: collageImage4Animation 0.7s forwards;
 }
 @-webkit-keyframes collageImage4Animation {
     100% {
-    transform: translateX(100px) translateY(10px);
+    transform: translateX(20%) translateY(2%);
     }
 }
 @-moz-keyframes collageImage4Animation {
     100% {
-    transform: translateX(100px) translateY(10px);
+    transform: translateX(20%) translateY(2%);
     }
 }
 @keyframes collageImage4Animation {
     100% {
-    transform: translateX(100px) translateY(10px);
+    transform: translateX(20%) translateY(2%);
     }
 }
 
 .collageImages:hover .collageImage2{
-    -webkit-animation: collageImage2Animation 1s forwards;
-    -moz-animation: collageImage2Animation 1s forwards;
-    animation: collageImage2Animation 1s forwards;
+    -webkit-animation: collageImage2Animation 0.7s forwards;
+    -moz-animation: collageImage2Animation 0.7s forwards;
+    animation: collageImage2Animation 0.7s forwards;
 }
 @-webkit-keyframes collageImage2Animation {
     100% {
-    transform: translateX(5px) translateY(150px);
+    transform: translateX(1%) translateY(45%);
     }
 }
 @-moz-keyframes collageImage2Animation {
     100% {
-    transform: translateX(5px) translateY(150px);
+    transform: translateX(1%) translateY(45%);
     }
 }
 @keyframes collageImage2Animation {
     100% {
-    transform: translateX(5px) translateY(150px);
+    transform: translateX(1%) translateY(45%);
     }
 }
