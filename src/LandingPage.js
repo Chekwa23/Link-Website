@@ -7,7 +7,8 @@ import emailjs from '@emailjs/browser';
 
 import {updateEmailList} from './firebase/APIs.js';
 
-import "./style.css"
+import "./animationStyles.css"
+import "./responsiveStyles.css"
 
 export default function LandingPage() {
   const waitlistRef = useRef(null)
@@ -38,67 +39,65 @@ export default function LandingPage() {
   return (
     <div>
     {/* Top bar */}
-    <div style={{display: "flex", flexDirection: "row", justifyContent: "space-between",  margin: "2vw 8vw 0 8vw"}}>
+    <div className='topBarDiv'>
       <div style={{display: "flex", flexDirection: "row"}}>
-        <Image src={require("./images/linkLogoWhite.svg").default} style={{width: "2.5vw"}}/>
-        <div style={{color: "#FFFFFF", fontSize: "1.6vw", marginLeft: "0.6vw"}}>
+        <Image src={require("./images/linkLogoWhite.svg").default} className='companyLogo' />
+        <div className='comanyNameDiv' >
           LINK
         </div>
       </div>
       <Button 
-        className="buttonStyle"
-        variant="light"  
-        style={{borderRadius: 0, fontSize: "0.8vw",fontWeight: "bold", padding: "0.7vw 1.8vw"}}
+        className="buttonStyle getAppButton"
+        variant="light"
         onClick={() => waitlistRef.current.scrollIntoView()}
       >
         GET THE APP
       </Button>
     </div>
-
+    {/* catch phrase */}
     <div className="slider" style={{marginTop: "3vw"}}>
-      <div className="sliderRight" style={{left: "-11.7vw", zIndex: "-10", position: "absolute"}}>
-        <div style={{fontSize:"6vw", fontWeight: "700", color: "#0E1724", lineHeight:"100%", textShadow: "-1px -1px 0 #999999, 1px -1px 0 #999999, -1px 1px 0 #999999, 1px 1px 0 #999999"}}>
+      <div className='sliderRight tripleCatchPhraseDiv' >
+        <div className='singleTripleCatchPhraseDiv' >
           NOTHING IS EVER FUN ALONE...
         </div>
-        <div style={{fontSize:"6vw", fontWeight: "700", color: "#0E1724", lineHeight:"100%", textShadow: "-1px -1px 0 #999999, 1px -1px 0 #999999, -1px 1px 0 #999999, 1px 1px 0 #999999"}}>
+        <div className='singleTripleCatchPhraseDiv' >
           NOTHING IS EVER FUN ALONE...
         </div>
-        <div style={{fontSize:"6vw", fontWeight: "700", color: "#0E1724", lineHeight:"100%", textShadow: "-1px -1px 0 #999999, 1px -1px 0 #999999, -1px 1px 0 #999999, 1px 1px 0 #999999"}}>
+        <div className='singleTripleCatchPhraseDiv' >
           NOTHING IS EVER FUN ALONE...
         </div>
       </div>
       <div style={{color: "#FFFFFF", textAlign: "center"}}>
         <div >
-          <Image src={require("./images/star.png")} style={{position: "absolute", width:"9vw", right: "38.5vw", top: "4.5vw" }}/>
-          <Image src={require("./images/basketBallImage.png")} style={{width:"18vw", marginTop: "1vw"}}/>
+          <Image src={require("./images/star.png")} className='starImage'/>
+          <Image src={require("./images/basketBallImage.png")} className='basketBallImage'/>
         </div>
         <div className="slider">
-          <div className="sliderUp" style={{fontSize:"4.4vw", fontWeight: "600", lineHeight:"100%"}} >
+          <div className="sliderUp catchPhraseDiv" >
             NOTHING IS EVER FUN ALONE...
           </div>
         </div>
         <div className="slider">
-          <div className="sliderUp" style={{fontSize:"1.8vw", color: "#E69D37", marginLeft: "45vw"}}>
+          <div className="sliderUp yesEvenThatDiv">
             - yes, even that
           </div>
         </div>
         <Container fluid>
           <Row>
-            <Col>
+            <Col className='noDisplayOnMobile'>
               <Image className='zoomOut' src={require("./images/outdoorParty.svg").default} style={{width:"22vw", marginTop: "0.5vw"}}/>
             </Col>
             <Col>
               <div className="slider">
-                <div className="sliderUp" style={{fontSize:"1.4vw"}}>
+                <div className="sliderUp lessChatMoreActionDiv">
                   <div style={{textDecoration: "line-through"}}>LESS CHAT, MORE ACTION</div>
-                  <div style={{position: "relative", left: "1vw", bottom: "1.3vw", color: "#E69D37", fontWeight: "700"}}> NO CHAT, JUST ACTION </div>
+                  <div className='noChatJustAction'> NO CHAT, JUST ACTION </div>
                 </div>
               </div>
-              <div className="slider" style={{marginTop: "2.5vw"}}>
+              <div className="slider joinWaitListButtonDiv">
                 <Button 
-                  className="buttonStyle sliderUp" 
+                  className="buttonStyle sliderUp joinWaitListButton" 
                   variant="light" 
-                  style={{borderRadius: 0, fontSize: "0.8vw",fontWeight: "bold", padding: "0.7vw 1.8vw"}}
                   onClick={() => waitlistRef.current.scrollIntoView()}
                 >
                   JOIN THE WAITLIST
@@ -106,11 +105,11 @@ export default function LandingPage() {
               </div>
               <Image 
                 src={require("./images/arrows.svg").default}  
-                style={{width:"2vw", marginTop: "6vw", cursor: "pointer"}}
+                className='arrowImage'
                 onClick={() => howDoesItWorkref.current.scrollIntoView()}
               />
             </Col>
-            <Col>
+            <Col className='noDisplayOnMobile'>
               <Image className='zoomOut' src={require("./images/burnFire.svg").default} style={{width:"22vw", marginTop: "3vw"}}/>
             </Col>
           </Row>
@@ -122,55 +121,61 @@ export default function LandingPage() {
       <IphoneInstructionsViewPortBlock />
     </div>
     {/* Collage */}
-    <div style={{marginTop: "15vw", textAlign: "center"}}>
+    <div style={{textAlign: "center"}}>
       <div style={{color: "#FFFFFF", textAlign: "center"}}>
-        <div className="" style={{fontSize:"0.8vw", letterSpacing: "0.2vw"}}>
+        <div className="letsLinkDiv">
           LET'S LINK!
         </div>
-        <div className="" style={{fontSize:"2.8vw", fontWeight: "600"}}>
+        <div className="whatAreYouUpToDiv">
           what are you up for?
         </div>
-        <div className="" style={{fontSize:"0.8vw", padding: "0 38vw"}}>
-          music, sports, weekend trips, drinks... There are no limits. Now is the time to do the things you've always wanted to do!
+        <div className="appDescriptionDiv">
+          music, sports, weekend trips, drinks... There are no limits. Now is the time to find and do the things you've always wanted to do!
         </div>
       </div>
-      <div className="collageImages" style={{position: "relative", top: "-3vw"}}>
-        <div style={{position: "relative", top: "8vw", display: "flex", flexDirection: "row"}}>
-          <div className='collageImage1' style={{position: "relative", zIndex: "-15", left: "23.5vw"}}>
-            <Image src={require("./images/collageImage1.svg").default} style={{width: "22vw"}}/>
+      <div className="collageImages slider" style={{position: "relative", top: "-4vw"}}>
+        <div className='collageImage3 noDisplayOnWeb' style={{position: "relative", zIndex: "-10", top: "25vw"}}>
+          <Image src={require("./images/collageImage3.svg").default} className="collageImageWidth"/>
+        </div>
+        <div className='collageRow1Div'>
+          <div className='collageImage1 collageImage1Div'>
+            <Image src={require("./images/collageImage1.svg").default} className="collageImageWidth"/>
           </div>
-          <div className='collageImage5' style={{position: "relative", zIndex: "-5", left: "28.5vw"}}>
-            <Image src={require("./images/collageImage5.svg").default} style={{width: "22vw"}}/>
+          <div className='collageImage5 collageImage5Div'>
+            <Image src={require("./images/collageImage5.svg").default} className="collageImageWidth"/>
           </div>
         </div>
 
-        <div style={{position: "relative", display: "flex", flexDirection: "row"}}>
-          <div className='collageImage3' style={{position: "relative", zIndex: "-10",  left: "13vw"}}>
-            <Image src={require("./images/collageImage3.svg").default} style={{width: "22vw"}}/>
+        <div className='collageRow2Div'>
+          <div className='collageImage3 noDisplayOnMobile' style={{position: "relative", zIndex: "-10", left: "13vw"}}>
+            <Image src={require("./images/collageImage3.svg").default} className="collageImageWidth"/>
           </div>
-          <div style={{position: "relative", zIndex: "-10", left: "18vw"}}>
-            <Image src={require("./images/collageImage7.svg").default} style={{width: "22vw"}}/>
+          <div className='collageImage7Div'>
+            <Image src={require("./images/collageImage7.svg").default} className="collageImageWidth"/>
           </div>
-          <div className='collageImage4' style={{position: "relative", zIndex: "-10", left: "22vw"}}>
-            <Image src={require("./images/collageImage4.svg").default} style={{width: "22vw"}}/>
+          <div className='collageImage4 noDisplayOnMobile' style={{position: "relative", zIndex: "-10", left: "22vw"}}>
+            <Image src={require("./images/collageImage4.svg").default} className="collageImageWidth"/>
           </div>
         </div>
 
-        <div style={{position: "relative", bottom: "6.5vw", display: "flex", flexDirection: "row"}}>
-          <div className='collageImage2' style={{position: "relative", zIndex: "-5", left: "24.5vw"}}>
-            <Image src={require("./images/collageImage2.svg").default} style={{width: "22vw"}}/>
+        <div className='collageRow3Div'>
+          <div className='collageImage2 collageImage2Div'>
+            <Image src={require("./images/collageImage2.svg").default} className="collageImageWidth"/>
           </div>
-          <div className='collageImage2' style={{position: "relative", zIndex: "-5", left: "31vw"}}>
-            <Image src={require("./images/collageImage6.svg").default} style={{width: "22vw"}}/>
+          <div className='collageImage2 collageImage6Div'>
+            <Image src={require("./images/collageImage6.svg").default} className="collageImageWidth"/>
           </div>
+        </div>
+        <div className='collageImage4 noDisplayOnWeb' style={{position: "relative", zIndex: "-10", left: "0vw", bottom: "25vw"}}>
+          <Image src={require("./images/collageImage4.svg").default} className="collageImageWidth"/>
         </div>
       </div>
     </div>
     {/* iphone group */}
     <IphoneGroupViewPortBlock/>
     {/* join the wait list */}
-    <div ref={waitlistRef} style={{backgroundColor: "#E69D37", textAlign: "center", padding: "5vw 28vw"}}>
-      <div style={{fontSize:"2.8vw", fontWeight: "600", lineHeight: "3vw"}}>
+    <div ref={waitlistRef} className="joinWaitListDiv">
+      <div className='joinWaitListTextDiv'>
         Join the waitlist and get notified when we launch
       </div>
       <div>
@@ -179,10 +184,9 @@ export default function LandingPage() {
             <Form.Control ref={emailRef} type="email" name="user_email" placeholder="Enter your email address" />
           </Form.Group>
           <Button 
-            className='buttonStyle2' 
+            className='buttonStyle2 joinWaitListSubmitButton' 
             variant="dark" 
             type="submit" 
-            style={{borderRadius: 0, fontSize: "0.8vw", padding: "0.7vw 1.8vw"}}
           >
             Join the waitlist
           </Button>
@@ -191,13 +195,13 @@ export default function LandingPage() {
     </div>
     {/* footer */}
     <div style={{textAlign: "center", color: "#CCCCCC", padding: "3vw 0"}}>
-      <div style={{fontSize: "1.3vw", color: "#FFFFFF"}}>
+      <div className='linkTextDiv'>
         LINK
       </div>
-      <div style={{fontSize: "0.8vw" }}>
+      <div className='rightsTextDiv'>
         2022 LINK, Inc. All right reserved.
       </div>
-      <div style={{fontSize: "0.8vw" }}>
+      <div className='rightsTextDiv'>
         <span style={{marginRight: "1.5vw"}}><Link className='linkStyle' to="/privacy-policy">Privacy Policy</Link></span><span><Link className='linkStyle' to="/terms-of-service">Terms of Service</Link></span>
       </div>
     </div>
@@ -212,86 +216,86 @@ const IphoneInstructionsViewPortBlock = handleViewport((props) => {
   const animationStyleSliderLeft = inViewport ? 'sliderLeft' : '';
 
   return (
-    <div ref={forwardedRef} style={{marginTop: "10vw", textAlign: "center"}}>
-      <div style={{color: "#FFFFFF", textAlign: "center"}}>
+    <div ref={forwardedRef} className="iphoneInstructionsDiv">
+        <div style={{color: "#FFFFFF", textAlign: "center"}}>
+            <div className="slider">
+            <div className={`${animationStyleSliderUp} letsLinkDiv`}>
+                LET'S LINK!
+            </div>
+            </div>
+            <div className="slider">  
+            <div className={`${animationStyleSliderUp} whatAreYouUpToDiv`}>
+                how does it work?
+            </div>
+            </div>
+            <div className="slider">
+            <div className={`${animationStyleSliderUp} appDescriptionDiv`}>
+                All you need to do create or join a group and that's all the magic to it
+            </div>
+            </div>
+        </div>
         <div className="slider">
-          <div className={animationStyleSliderUp} style={{fontSize:"0.8vw", letterSpacing: "0.2vw"}}>
-            LET'S LINK!
-          </div>
-        </div>
-        <div className="slider">  
-          <div className={animationStyleSliderUp} style={{fontSize:"2.8vw", fontWeight: "600"}}>
-            how does it work?
-          </div>
-        </div>
-        <div className="slider">
-          <div className={animationStyleSliderUp} style={{fontSize:"0.8vw"}}>
-            All you need to do is join or create a group and that's all the magic to it
-          </div>
-        </div>
-      </div>
-      <div className="slider">
-        <div className={animationStyleSliderRight}>
-          <div style={{position: "absolute", left: "24vw", marginTop: "10vw"}}>
-            <div style={{width: "22vw", fontSize: "1vw", textAlign: "right", display: "flex", flexDirection: "row", backgroundColor: "#FFFFFF"}}>
-              <div style={{padding: "1vw 1vw 1vw 1vw", width: "82%"}}>
-                <div style={{color: "#2B72D6", fontWeight: "500", fontSize:"1.3vw"}}>
-                  Join a group
+            <div className={animationStyleSliderRight}>
+                <div className='iphoneCard1Div1'>
+                  <div className='iphoneCard1Div2'>
+                    <div style={{padding: "1vw 1vw 1vw 1vw", width: "82%"}}>
+                      <div className='iphoneCardJoinGroupDiv'>
+                        Join a group
+                      </div>
+                      <div>
+                        You can choose to join existing groups and sort based on your interests be it social, sports and all sorts.
+                      </div>
+                    </div>
+                    <div style={{display: "flex", flexDirection: "col", justifyContent:"center", alignItems:"center", backgroundColor: "#E69D37", width: "18%"}}>
+                      <Image src={require("./images/linkLogoWhite.svg").default} className='iphoneCardLogoImageWidth'/>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  You can choose to join existing groups and sort based on your interests be it social, sports and all sorts.
+                <div className='iphoneCardVectorLeftDiv'>
+                    <Image src={require("./images/vectorLeft.svg").default} className='iphoneCardVectorLeftImage'/>
                 </div>
-              </div>
-              <div style={{display: "flex", flexDirection: "col", justifyContent:"center", alignItems:"center", backgroundColor: "#E69D37", width: "18%"}}>
-                <Image src={require("./images/linkLogoWhite.svg").default} style={{width: "2.5vw"}}/>
-              </div>
             </div>
-          </div>
-          <div style={{position: "absolute", left: "46vw", marginTop: "15vw"}}>
-            <Image src={require("./images/vectorLeft.svg").default} style={{width:"3vw"}}/>
-          </div>
-        </div>
-        <div className={animationStyleSliderLeft}>
-          <div style={{position: "absolute", right: "12.5vw", marginTop: "13vw"}}>
-            <div style={{width: "22vw", fontSize: "1vw", textAlign: "left", display: "flex", flexDirection: "row", backgroundColor: "#FFFFFF"}}>
-              <div style={{display: "flex", flexDirection: "col", justifyContent:"center", alignItems:"center", backgroundColor: "#E69D37", width: "18%"}}>
-                <Image src={require("./images/linkLogoWhite.svg").default} style={{width: "2.5vw"}}/>
-              </div>
-              <div style={{padding: "1vw 1vw 1vw 1vw", width: "82%"}}>
-                <div style={{color: "#2B72D6", fontWeight: "500", fontSize:"1.3vw"}}>
-                  Create a group
+            <div className={animationStyleSliderLeft}>
+                <div className='iphoneCard2Div1'>
+                    <div className='iphoneCard2Div2'>
+                        <div style={{display: "flex", flexDirection: "col", justifyContent:"center", alignItems:"center", backgroundColor: "#E69D37", width: "18%"}}>
+                            <Image src={require("./images/linkLogoWhite.svg").default} className='iphoneCardLogoImageWidth'/>
+                        </div>
+                        <div style={{padding: "1vw 1vw 1vw 1vw", width: "82%"}}>
+                            <div className='iphoneCardJoinGroupDiv'>
+                            Create a group
+                            </div>
+                            <div>
+                            You can also create your own group, listing out all the specific details for other people to join in.
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                  You can also create your own group, listing out all the specific details for other people to join in.
+                <div className='iphoneCardVectorRightDiv'>
+                    <Image src={require("./images/vectorRight.svg").default} className='iphoneCardVectorRightImage'/>
                 </div>
-              </div>
             </div>
-          </div>
-          <div style={{position: "absolute", right: "34.2vw", marginTop: "14.5vw"}}>
-            <Image src={require("./images/vectorRight.svg").default} style={{width:"5vw"}}/>
-          </div>
-        </div>
-        <div className={animationStyleSliderLeft}>
-          <div style={{position: "absolute", right: "27vw", marginTop: "33vw"}}>
-            <div style={{width: "22vw", fontSize: "1vw", textAlign: "left", display: "flex", flexDirection: "row", backgroundColor: "#FFFFFF"}}>
-              <div style={{display: "flex", flexDirection: "col", justifyContent:"center", alignItems:"center", backgroundColor: "#E69D37", width: "18%"}}>
-                <Image src={require("./images/linkLogoWhite.svg").default} style={{width: "2.5vw"}}/>
-              </div>
-              <div style={{padding: "1vw 1vw 1vw 1vw", width: "82%"}}>
-                <div style={{color: "#2B72D6", fontWeight: "500", fontSize:"1.3vw"}}>
-                  View group details
+            <div className={animationStyleSliderLeft}>
+                <div className='iphoneCard3Div1'>
+                    <div className='iphoneCard2Div2'>
+                        <div style={{display: "flex", flexDirection: "col", justifyContent:"center", alignItems:"center", backgroundColor: "#E69D37", width: "18%"}}>
+                            <Image src={require("./images/linkLogoWhite.svg").default} className='iphoneCardLogoImageWidth'/>
+                        </div>
+                        <div style={{padding: "1vw 1vw 1vw 1vw", width: "82%"}}>
+                            <div className='iphoneCardJoinGroupDiv'>
+                            View group details
+                            </div>
+                            <div>
+                            Check out group details to know stuff like where and time to meet up.
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                  Check out group details to know stuff like where and time to meet up.
-                </div>
-              </div>
             </div>
-          </div>
+            <div className='iphoneImageDiv'>
+                <Image src={require("./images/iphoneHomePage.svg").default} className='iphoneImage'/>
+            </div>
         </div>
-        <div style={{position: "relative", zIndex: "-10"}}>
-          <Image src={require("./images/iphoneHomePage.svg").default} style={{width:"40vw"}}/>
-        </div>
-      </div>
     </div>
   )
 });
@@ -302,16 +306,16 @@ const IphoneGroupViewPortBlock = handleViewport((props) => {
   return (
     <div style={{textAlign: "center"}} ref={forwardedRef}>
       <div style={{color: "#FFFFFF", textAlign: "center"}}>
-        <div className="" style={{fontSize:"2.8vw", fontWeight: "600"}}>
+        <div className="whatAreYouUpToDiv">
           do more things you like
         </div>
-        <div className="" style={{fontSize:"0.8vw", padding: "0vw 35vw"}}>
-          LINK is simple, fun, and productive. You can post and discover plan ideas, participate in groups, and plan activities together.
+        <div className="appDescriptionDiv">
+          LINK is simple, fun and productive. You can create or discover. Join groups and engage in activities you love, either with strangers or friends. Now you are never alone!
         </div>
       </div>
       <div className="slider">
-        <div className={animationStyle} id="sliderUpIphoneGroup" style={{marginTop: "5vw"}}>
-          <Image src={require("./images/iphoneGroup.svg").default} style={{width: "70vw"}}/>
+        <div className={`${animationStyle} iphoneGroupImageDiv`} id="sliderUpIphoneGroup">
+          <Image src={require("./images/iphoneGroup.svg").default} className="iphoneGroupImage"/>
         </div>
       </div>
     </div>

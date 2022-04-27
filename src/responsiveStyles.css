@@ -1,0 +1,680 @@
+
+/* Top bar */
+.topBarDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2vw 8vw 0 8vw;
+}
+
+.companyLogo {
+    width: 2.5vw;
+}
+
+.comanyNameDiv {
+    color: #FFFFFF;
+    font-size: 1.6vw;
+    margin-left: 0.6vw;
+}
+
+.getAppButton {
+    border-radius: 0 !important;
+    font-size: 0.8vw;
+    font-weight: bold !important;
+    padding: 0.7vw 1.8vw;
+}
+
+/* catch phrase */
+
+.tripleCatchPhraseDiv {
+    left: -11.7vw;
+    z-index: -10;
+    position: absolute;
+}
+
+.singleTripleCatchPhraseDiv {
+    font-size: 6vw;
+    font-weight: 700;
+    color: #0E1724;
+    line-height: 100%;
+    opacity: 0.3;
+    text-shadow: -1px -1px 0 #999999, 1px -1px 0 #999999, -1px 1px 0 #999999, 1px 1px 0 #999999;
+}
+
+.starImage {
+    position: absolute;
+    width: 9vw;
+    right: 38.5vw;
+    top: 4.5vw;
+}
+
+.basketBallImage {
+    width: 18vw;
+    margin-top: 1vw;
+}
+
+.catchPhraseDiv {
+    font-size: 4.4vw;
+    font-weight: 600;
+    line-height: 100%;
+}
+
+.yesEvenThatDiv {
+    font-size: 1.8vw;
+    color: #E69D37;
+    margin-left: 45vw;
+}
+
+.lessChatMoreActionDiv {
+    font-size: 1.4vw;
+}
+
+.noChatJustAction {
+    position: relative;
+    left: 1vw;
+    bottom: 1.3vw;
+    color: #E69D37;
+    font-weight: 700;
+}
+
+.joinWaitListButtonDiv {
+    margin-top: 2.5vw;
+}
+
+.joinWaitListButton {
+    border-radius: 0 !important;
+    font-size: 0.8vw !important;
+    font-weight: bold !important;
+    padding: 0.7vw 1.8vw !important;
+}
+
+.arrowImage {
+    width: 2vw;
+    margin-top: 6vw;
+    cursor: pointer;
+}
+
+/* iphone */
+
+.iphoneInstructionsDiv {
+    margin-top: 10vw;
+    text-align: center;
+}
+
+.iphoneCard1Div1 {
+    position: absolute;
+    left: 19vw;
+    margin-top: 4vw;
+}
+.iphoneCard1Div2 {
+    width: 22vw;
+    font-size: 1vw;
+    text-align: right;
+    display: flex;
+    flex-direction: row;
+    background-color: #FFFFFF;
+}
+.iphoneCardJoinGroupDiv {
+    color: #2B72D6;
+    font-weight: 500;
+    font-size: 1.3vw;
+}
+.iphoneCardLogoImageWidth {
+    width: 2.5vw;
+}
+
+.iphoneCardVectorLeftDiv {
+    position: absolute;
+    left: 40vw;
+    margin-top: 8.5vw;
+}
+.iphoneCardVectorLeftImage {
+    width: 4vw;
+}
+
+.iphoneCard2Div1 {
+    position: absolute;
+    left: 61vw;
+    margin-top: 8.9vw;
+}
+.iphoneCard2Div2 {
+    width: 22vw;
+    font-size: 1vw;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    background-color: #FFFFFF;
+}
+
+.iphoneCardVectorRightDiv {
+    position: absolute;
+    right: 38.5vw;
+    margin-top: 10vw;
+}
+.iphoneCardVectorRightImage {
+    width: 5.5vw;
+}
+
+.iphoneCard3Div1 {
+    position: absolute;
+    left: 47vw;
+    margin-top: 30vw;
+}
+
+.iphoneImageDiv {
+    position: relative;
+    right: 5vw;
+    bottom: 5vw;
+    z-index: -10;
+}
+.iphoneImage {
+    width: 42vw;
+}
+
+/* Collage */
+
+.letsLinkDiv {
+    font-size: 0.8vw;
+    letter-spacing: 0.2vw;
+}
+
+.whatAreYouUpToDiv {
+    font-size: 2.8vw;
+    font-weight: 600;
+}
+
+.appDescriptionDiv {
+    font-size: 0.8vw;
+    padding: 0 38vw;
+}
+
+.collageRow1Div {
+    position: relative;
+    top: 8vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.collageImage1Div {
+    position: relative;
+    z-index: -15;
+    left: 23.5vw;
+}
+
+.collageImage5Div {
+    position: relative;
+    z-index: -5;
+    left: 28.5vw;
+}
+
+.collageRow2Div {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.collageImage3Div {
+    position: relative;
+    z-index: -10;
+    left: 13vw;
+}
+
+.collageImage7Div {
+    position: relative;
+    z-index: -10;
+    left: 18vw;
+}
+
+.collageImage4Div {
+    position: relative;
+    z-index: -10;
+    left: 22vw;
+}
+
+.collageRow3Div {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    bottom: 5.7vw;
+}
+
+.collageImage2Div {
+    position: relative;
+    z-index: -5;
+    left: 24.5vw;
+}
+
+.collageImage6Div {
+    position: relative;
+    z-index: -5;
+    left: 30vw;
+}
+
+.collageImageWidth {
+    width: 20vw;
+}
+
+/* iphone group */
+
+.iphoneGroupImageDiv {
+    margin-top: 5vw;
+}
+.iphoneGroupImage {
+    width: 54vw;
+}
+
+/* join the wait list */
+
+.joinWaitListDiv {
+    background-color: #E69D37;
+    text-align: center;
+    padding: 5vw 28vw;
+}
+
+.joinWaitListTextDiv {
+    font-size: 2.8vw;
+    font-weight: 600;
+    line-height: 3vw;
+}
+
+.joinWaitListSubmitButton {
+    border-radius: 0 !important;
+    font-size: 0.8vw !important;
+    padding: 0.7vw 1.8vw !important;
+}
+
+/* footer */
+
+.linkTextDiv {
+    font-size: 1.3vw;
+    color: #FFFFFF;
+}
+
+.rightsTextDiv {
+    font-size: 0.8vw;
+}
+
+.noVisibleOnWeb {
+    visibility: hidden;
+}
+.noVisibleOnMobile {
+    visibility: visible;
+}
+
+.noDisplayOnWeb{
+    display: none;
+}
+.noDisplayOnMobile{
+    display: block;
+}
+
+.form-control {
+    border-radius: 0 !important;
+    border-width: 0.13vw !important;
+    border-color: black !important;
+    color: black !important;
+    font-size: 0.8vw !important;
+    padding: 0.7vw 1.1vw !important;
+    width: 22vw !important;
+    background-color: #E69D37 !important;
+    margin-right: 1vw;
+}
+
+.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: black !important;
+    opacity: 1; /* Firefox */
+}
+
+.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: black !important;
+}
+
+.form-control::-ms-input-placeholder { /* Microsoft Edge */
+    color: black !important;
+}
+
+.buttonStyle:hover {
+    background-color: #E69D37 !important;
+    color: white !important;
+    border-color: #E69D37 !important;
+}
+
+.buttonStyle2:hover {
+    background-color: white !important;
+    color: black !important;
+    border-color: white !important;
+}
+
+.linkStyle {
+    text-decoration: none !important;
+    color: #CCCCCC;
+}
+
+.linkStyle:hover {
+    color: #E69D37;
+}
+
+/* -------------------------------------------------------------------------------------------------------------- */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    
+    /* Top bar */
+    .topBarDiv {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0.5vw 2vw 0.5vw 2vw;
+        margin: 0 0 0 0;
+        background-color: #244A76;
+    }
+
+    .companyLogo {
+        width: 10vw;
+    }
+
+    .comanyNameDiv {
+        color: #FFFFFF;
+        font-size: 8vw;
+        margin-left: 1vw;
+    }
+
+    .getAppButton {
+        border-radius: 0;
+        font-size: 3vw !important;
+        font-weight: bold !important;
+        margin: 2vw 0;
+        padding: 0;
+    }
+
+    /* catch phrase */
+
+    .tripleCatchPhraseDiv {
+        left: -5vw;
+        z-index: -10;
+        position: absolute;
+    }
+
+    .singleTripleCatchPhraseDiv {
+        font-size: 18vw;
+        font-weight: 700;
+        color: #0E1724;
+        line-height: 100%;
+        opacity: 0.3;
+        text-shadow: -1px -1px 0 #999999, 1px -1px 0 #999999, -1px 1px 0 #999999, 1px 1px 0 #999999;
+    }
+
+    .starImage {
+        position: absolute;
+        width: 25vw;
+        right: 10vw;
+        top: 13vw;
+    }
+
+    .basketBallImage {
+        width: 70vw;
+        margin-top: 10vw;
+    }
+
+    .catchPhraseDiv {
+        font-size: 14vw;
+        font-weight: 600;
+        line-height: 100%;
+    }
+
+    .yesEvenThatDiv {
+        font-size: 5.5vw;
+        color: #E69D37;
+        margin-left: 50%;
+    }
+
+    .lessChatMoreActionDiv {
+        font-size: 5.5vw;
+    }
+
+    .noChatJustAction {
+        position: relative;
+        left: 2vw;
+        bottom: 5vw;
+        color: #E69D37;
+        font-weight: 700;
+    }
+
+    .joinWaitListButtonDiv {
+        margin-top: 5vw;
+    }
+
+    .joinWaitListButton {
+        border-radius: 0 !important;
+        font-size: 3vw !important;
+        font-weight: bold !important;
+        padding: 3vw 3vw !important;
+    }
+
+    .arrowImage {
+        width: 8vw;
+        margin-top: 16vw;
+        cursor: pointer;
+    }
+
+    /* iphone */
+
+    .iphoneInstructionsDiv {
+        margin-top: 40vw;
+        text-align: center;
+    }
+
+    .iphoneCard1Div1 {
+        position: absolute;
+        left: 2vw;
+        margin-top: 26.5vw;
+    }
+    .iphoneCard1Div2 {
+        width: 35vw;
+        font-size: 3vw;
+        text-align: right;
+        display: flex;
+        flex-direction: row;
+        background-color: #FFFFFF;
+    }
+    .iphoneCardJoinGroupDiv {
+        color: #2B72D6;
+        font-weight: 500;
+        font-size: 3.5vw;
+    }
+    .iphoneCardLogoImageWidth {
+        width: 5vw;
+    }
+
+    .iphoneCardVectorLeftDiv {
+        position: absolute;
+        left: 15vw;
+        margin-top: 27vw;
+        z-index: -10;
+    }
+    .iphoneCardVectorLeftImage {
+        width: 20vw !important;
+    }
+
+    .iphoneCard2Div1 {
+        position: absolute;
+        left: 63vw;
+        margin-top: 65vw;
+    }
+    .iphoneCard2Div2 {
+        width: 35vw;
+        font-size: 3vw;
+        text-align: left;
+        display: flex;
+        flex-direction: row;
+        background-color: #FFFFFF;
+    }
+
+    .iphoneCardVectorRightDiv {
+        position: absolute;
+        right: 2vw;
+        margin-top: 49vw;
+        z-index: -10;
+    }
+    .iphoneCardVectorRightImage {
+        width: 25vw !important;
+    }
+
+    .iphoneCard3Div1 {
+        position: absolute;
+        left: 45vw;
+        margin-top: 122vw;
+    }
+
+    .iphoneImageDiv {
+        position: relative;
+        right: 40vw;
+        z-index: -10;
+    }
+    .iphoneImage {
+        width: 150vw;
+    }
+
+
+    /* Collage */
+
+    .letsLinkDiv {
+        font-size: 4vw;
+        letter-spacing: 0.2vw;
+    }
+
+    .whatAreYouUpToDiv {
+        font-size: 11vw;
+        font-weight: 600;
+        line-height: 100%;
+    }
+
+    .appDescriptionDiv {
+        font-size: 4vw;
+        padding: 0 3vw;
+    }
+
+    
+
+    .collageRow1Div {
+        position: relative;
+        top: 8vw;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .collageImage1Div {
+        position: relative;
+        z-index: -15;
+        left: 0;
+    }
+
+    .collageImage5Div {
+        position: relative;
+        z-index: -5;
+        left: 10vw;
+    }
+
+    .collageRow2Div {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .collageImage7Div {
+        position: relative;
+        z-index: -10;
+        left: 28vw;
+    }
+
+    .collageRow3Div {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        bottom: 12vw;
+    }
+
+    .collageImage2Div {
+        position: relative;
+        z-index: -5;
+        left: 0;
+    }
+
+    .collageImage6Div {
+        position: relative;
+        z-index: -5;
+        left: 17vw;
+    }
+
+    .collageImageWidth {
+        width: 45vw;
+    }
+
+    /* iphone group */
+
+    .iphoneGroupImageDiv {
+        display: flex;
+        justify-content: center;
+        margin-top: 10vw;
+    }
+    .iphoneGroupImage {
+        width: 160vw;
+    }
+
+    /* join the wait list */
+
+    .joinWaitListDiv {
+        background-color: #E69D37;
+        text-align: center;
+        padding: 5vw 6vw;
+    }
+
+    .joinWaitListTextDiv {
+        font-size: 6vw;
+        font-weight: 600;
+        line-height: 100%;
+    }
+
+    .joinWaitListSubmitButton {
+        border-radius: 0 !important;
+        font-size: 3vw !important;
+        padding: 0.7vw 1.8vw !important;
+    }
+
+    /* footer */
+
+    .linkTextDiv {
+        font-size: 5vw;
+        color: #FFFFFF;
+    }
+
+    .rightsTextDiv {
+        font-size: 3vw;
+    }
+
+    .noVisibleOnWeb {
+        visibility: visible;
+    }
+    .noVisibleOnMobile {
+        visibility: hidden;
+    }
+
+    .noDisplayOnWeb{
+        display: block;
+    }
+    .noDisplayOnMobile{
+        display: none;
+    }
+
+    .form-control {
+        border-radius: 0 !important;
+        border-width: 0.4vw !important;
+        border-color: black !important;
+        color: black !important;
+        font-size: 3.5vw !important;
+        padding: 0.7vw 1.1vw !important;
+        width: 50vw !important;
+        background-color: #E69D37 !important;
+        margin-right: 1vw;
+    }
+}

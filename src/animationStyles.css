@@ -1,0 +1,215 @@
+.slider {
+    overflow: hidden;
+}
+
+.sliderRight {
+    /* position: absolute; */
+    -webkit-animation: slideInRight 2s forwards;
+    -moz-animation: slideInRight 2s forwards;
+    animation: slideInRight 2s forwards;
+}
+@-webkit-keyframes slideInRight {
+    0% {
+    transform: translateX(-900px);
+    }
+    100% {
+    transform: translateX(0);
+    }
+}
+@-moz-keyframes slideInRight {
+    0% {
+    transform: translateX(-900px);
+    }
+    100% {
+    transform: translateX(0);
+    }
+}
+@keyframes slideInRight {
+    0% {
+    transform: translateX(-900px);
+    }
+    100% {
+    transform: translateX(0);
+    }
+}
+
+.sliderLeft {
+    -webkit-animation: slideInLeft 2s forwards;
+    -moz-animation: slideInLeft 2s forwards;
+    animation: slideInLeft 2s forwards;
+}
+@-webkit-keyframes slideInLeft {
+    0% {
+    transform: translateX(900px);
+    }
+    100% {
+    transform: translateX(0);
+    }
+}
+@-moz-keyframes slideInLeft {
+    0% {
+    transform: translateX(900px);
+    }
+    100% {
+    transform: translateX(0);
+    }
+}
+@keyframes slideInLeft {
+    0% {
+    transform: translateX(900px);
+    }
+    100% {
+    transform: translateX(0);
+    }
+}
+
+.sliderUp {
+    -webkit-animation: slideUp 2s ease;
+    -moz-animation: slideUp 2s ease;
+    animation: slideUp 2s ease;
+}
+@-webkit-keyframes slideUp {
+    0% {
+    transform: translateY(100%);
+    }
+    100% {
+    transform: translateY(0%);
+    }
+}
+@-moz-keyframes slideUp {
+    0% {
+    transform: translateY(100%);
+    }
+    100% {
+    transform: translateY(0%);
+    }
+}
+@keyframes slideUp {
+    0% {
+    transform: translateY(100%);
+    }
+    100% {
+    transform: translateY(0%);
+    }
+}
+
+.zoomOut {
+    -webkit-animation: zoomOut 2s ease-out;
+    -moz-animation: zoomOut 2s ease-out;
+    animation: zoomOut 2s ease-out;
+}
+@keyframes zoomOut {
+    0% {
+        transform: scale(0, 0);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+
+
+.collageImages:hover .collageImage1{
+    -webkit-animation: collageImage1Animation 0.7s forwards;
+    -moz-animation: collageImage1Animation 0.7s forwards;
+    animation: collageImage1Animation 0.7s forwards;
+}
+@-webkit-keyframes collageImage1Animation {
+    100% {
+    transform: translateX(-26%) translateY(-29%);
+    }
+}
+@-moz-keyframes collageImage1Animation {
+    100% {
+    transform: translateX(-26%) translateY(-29%);
+    }
+}
+@keyframes collageImage1Animation {
+    100% {
+    transform: translateX(-26%) translateY(-29%);
+    }
+}
+
+.collageImages:hover .collageImage5{
+    -webkit-animation: collageImage5Animation 0.7s forwards;
+    -moz-animation: collageImage5Animation 0.7s forwards;
+    animation: collageImage5Animation 0.7s forwards;
+}
+@-webkit-keyframes collageImage5Animation {
+    100% {
+    transform: translateX(53%) translateY(-30%);
+    }
+}
+@-moz-keyframes collageImage5Animation {
+    100% {
+    transform: translateX(53%) translateY(-30%);
+    }
+}
+@keyframes collageImage5Animation {
+    100% {
+    transform: translateX(53%) translateY(-30%);
+    }
+}
+
+.collageImages:hover .collageImage3{
+    -webkit-animation: collageImage3Animation 0.7s forwards;
+    -moz-animation: collageImage3Animation 0.7s forwards;
+    animation: collageImage3Animation 0.7s forwards;
+}
+@-webkit-keyframes collageImage3Animation {
+    100% {
+    transform: translateX(-20%) translateY(10%);
+    }
+}
+@-moz-keyframes collageImage3Animation {
+    100% {
+    transform: translateX(-20%) translateY(10%);
+    }
+}
+@keyframes collageImage3Animation {
+    100% {
+    transform: translateX(-20%) translateY(10%);
+    }
+}
+
+.collageImages:hover .collageImage4{
+    -webkit-animation: collageImage4Animation 0.7s forwards;
+    -moz-animation: collageImage4Animation 0.7s forwards;
+    animation: collageImage4Animation 0.7s forwards;
+}
+@-webkit-keyframes collageImage4Animation {
+    100% {
+    transform: translateX(20%) translateY(2%);
+    }
+}
+@-moz-keyframes collageImage4Animation {
+    100% {
+    transform: translateX(20%) translateY(2%);
+    }
+}
+@keyframes collageImage4Animation {
+    100% {
+    transform: translateX(20%) translateY(2%);
+    }
+}
+
+.collageImages:hover .collageImage2{
+    -webkit-animation: collageImage2Animation 0.7s forwards;
+    -moz-animation: collageImage2Animation 0.7s forwards;
+    animation: collageImage2Animation 0.7s forwards;
+}
+@-webkit-keyframes collageImage2Animation {
+    100% {
+    transform: translateX(1%) translateY(45%);
+    }
+}
+@-moz-keyframes collageImage2Animation {
+    100% {
+    transform: translateX(1%) translateY(45%);
+    }
+}
+@keyframes collageImage2Animation {
+    100% {
+    transform: translateX(1%) translateY(45%);
+    }
+}

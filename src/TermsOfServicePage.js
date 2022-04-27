@@ -2,7 +2,8 @@ import React from 'react'
 import {Container, Image} from 'react-bootstrap'
 import {Link} from "react-router-dom";
 
-import "./style.css"
+import "./animationStyles.css"
+import "./responsiveStyles.css"
 
 export default function TermsOfServicePage() {
   return (
@@ -10,8 +11,8 @@ export default function TermsOfServicePage() {
       <Link className='linkStyle' to="/">
         <div style={{display: "flex", flexDirection: "row", justifyContent: "space-between",  margin: "2vw 8vw 0 8vw"}}>
           <div style={{display: "flex", flexDirection: "row"}}>
-            <Image src={require("./images/linkLogoWhite.svg").default} style={{width: "2.5vw"}}/>
-            <div style={{color: "#FFFFFF", fontSize: "1.6vw", marginLeft: "0.6vw"}}>
+            <Image src={require("./images/linkLogoWhite.svg").default} className='companyLogo'/>
+            <div className='comanyNameDiv'>
               LINK
             </div>
           </div>
