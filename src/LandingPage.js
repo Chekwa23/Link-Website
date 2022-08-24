@@ -4,6 +4,8 @@ import {Link} from "react-router-dom";
 
 import handleViewport from 'react-in-viewport';
 import emailjs from '@emailjs/browser';
+import { FaGooglePlay } from 'react-icons/fa';
+import { AiFillApple } from 'react-icons/ai';
 
 import {updateEmailList} from './firebase/APIs.js';
 
@@ -100,7 +102,8 @@ export default function LandingPage() {
                   variant="light" 
                   onClick={() => waitlistRef.current.scrollIntoView()}
                 >
-                  JOIN THE WAITLIST
+                  {/* JOIN THE WAITLIST */}
+                  LET'S GET IT!
                 </Button>
               </div>
               <Image 
@@ -176,6 +179,39 @@ export default function LandingPage() {
     {/* join the wait list */}
     <div ref={waitlistRef} className="joinWaitListDiv">
       <div className='joinWaitListTextDiv'>
+        It's finally here! Get it now.
+      </div>
+      <div className='joinWaitListTextDiv' >
+        <div className="mt-3">
+          <a 
+            className="btn btn-outline-light me-2"
+            role="button"
+            href="https://play.google.com/store/apps/details?id=com.chekwa.link"
+          > 
+            <div className="d-flex flex-row align-items-center">
+              <FaGooglePlay size={40}/>
+              <div>
+                <p className="mb-0" style={{fontSize:"10px"}}>Available on</p>
+                <p className="mb-0" style={{fontSize:"15px", fontWeight:"bolder"}}>Google Play</p>
+              </div>
+            </div>
+          </a>
+          <a 
+            className="btn btn-outline-light"
+            role="button"
+            href="https://apps.apple.com/us/app/link-cd/id1621889361"
+          > 
+            <div className="d-flex flex-row align-items-center">
+              <AiFillApple size={40}/>
+              <div>
+                <p className="mb-0" style={{fontSize:"10px"}}>Download on the</p>
+                <p className="mb-0" style={{fontSize:"15px", fontWeight:"bolder"}}>App Store</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      {/* <div className='joinWaitListTextDiv'>
         Join the waitlist and get notified when we launch
       </div>
       <div>
@@ -191,7 +227,7 @@ export default function LandingPage() {
             Join the waitlist
           </Button>
         </Form>
-      </div>
+      </div> */}
     </div>
     {/* footer */}
     <div style={{textAlign: "center", color: "#CCCCCC", padding: "3vw 0"}}>
@@ -306,6 +342,9 @@ const IphoneGroupViewPortBlock = handleViewport((props) => {
   return (
     <div style={{textAlign: "center"}} ref={forwardedRef}>
       <div style={{color: "#FFFFFF", textAlign: "center"}}>
+        <div className="letsLinkDiv">
+          LET'S LINK!
+        </div>
         <div className="whatAreYouUpToDiv">
           do more things you like
         </div>
